@@ -1,9 +1,16 @@
+"""Module providing a function fetching btc data."""
+
+import os
 import yfinance as yf
 import pandas as pd
 import matplotlib.pyplot as plt
 
+PROXY = 'http://127.0.0.1:7890'
+os.environ['HTTP_PROXY'] = PROXY
+os.environ['HTTPS_PROXY'] = PROXY
+
 # Download historical Bitcoin data (daily)
-btc = yf.download("BTC-USD", start="2020-01-01", end="2025-01-01", interval="1d")
+btc = yf.download("BTC-USD", start="2025-01-01", end="2025-01-02", interval="1d")
 
 # Display basic info
 print(btc.head())
