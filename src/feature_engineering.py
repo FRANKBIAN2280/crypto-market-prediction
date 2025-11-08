@@ -5,6 +5,8 @@ Creates technical indicators and engineered features from raw Bitcoin data.
 Designed to work with DataFrames output by `data_loader.py`.
 """
 
+# TODO: fix import errors
+
 import pandas as pd
 import numpy as np
 import ta  # Technical Analysis library: pip install ta
@@ -90,6 +92,7 @@ def prepare_features(df):
     df = add_time_features(df)
     return df
 
+#TODO: fix error in example code
 
 # ─────────────────────────────────────────────
 # Example Usage
